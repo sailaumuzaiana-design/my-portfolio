@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Айана - Сайт-визитка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: #212529;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #ff7e5f;
+        }
+
+        main {
+            max-width: 750px;
+            margin: 25px auto;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #ff7e5f;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .service-card {
+            background: #fff5f2;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff7e5f;
+        }
+
+        .interactive-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            background: #ff7e5f;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e06648;
+        }
+
+        #responseMsg {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #28a745;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Айана Сыйлаумуза</h1>
+        <p>Графикалық & Веб-дизайнер</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Мен туралы</a></li>
+                <li><a href="#services">Кызметтер</a></li>
+                <li><a href="#contact">Байланыс</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>Мен туралы</h2>
+            <p>Сәлем! Мен цифрлық дизайн мен заманауи веб-интерфейстерді әзірлеуге әуеспін. Пайдаланушыларға ыңғайлы әрі әдемі визуалды жобалар жасаймын.</p>
+        </section>
+
+        <section id="services">
+            <h2>Менің қызметтерім</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>UI/UX Дизайн</h3>
+                    <p>Сайттар мен қосымшаларға арналған ыңғайлы интерфейс.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Веб-верстка</h3>
+                    <p>Адаптивті HTML & CSS кодтау.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="interactive-section">
+            <h2>Кері байланыс</h2>
+            <p style="margin-bottom: 15px;">Төмендегі батырманы басып, хабарлама қалдырыңыз:</p>
+            <button id="interactiveBtn">Байланысу</button>
+            <p id="responseMsg"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Айана. Барлық құқықтар қорғалған.</p>
+    </footer>
+
+    <script>
+        // JS Интерактивті элемент
+        const btn = document.getElementById('interactiveBtn');
+        const msg = document.getElementById('responseMsg');
+
+        btn.addEventListener('click', () => {
+            msg.textContent = '✨ Рахмет! Хабарламаңыз сәтті жіберілді.';
+            btn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
